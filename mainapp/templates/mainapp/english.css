@@ -1,0 +1,79 @@
+
+* {
+    
+    padding:0;
+    margin: 0;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+/*-----------------text before listing--------------------*/
+
+.search_l {
+    background-image:url(../images/search_bgk.jpg);
+/*    padding: 0px 0 0px;*/
+    text-align: center;
+}
+
+.search_l p {
+    
+/*    padding-bottom: 30px;*/
+/*    color: #737373;*/
+    color: dimgray;
+}
+
+.search_l h2 {
+    
+    color: #4c4c4c;
+    margin: 40px 0 20px;
+}
+
+.search_l i {
+    
+    padding: 5px;
+    font-size: 50px;
+    border-radius: 50px;
+    color: pink;
+}
+
+
+/*-----------------End text before listing-----------------*/
+
+
+/*---------this is the final marks-----------------*/
+
+
+.aako_marks h2{
+     font-size:200px;
+    
+}
+
+.number_tab{
+   margin-top: -20px;
+}
+.number_tab h3{
+    font-family:cursive;
+    font-size: 80px;
+    color:orchid;
+    text-shadow: 2px 3px 15px orange;
+    margin-top: 100px;
+    text-align: center;
+
+    
+}
+
+.bich{
+    background-image: url(orange.png);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+    
+}
+
+/*---------this is the final marks-----------------*/

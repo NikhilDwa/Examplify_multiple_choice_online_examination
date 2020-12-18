@@ -1,0 +1,143 @@
+<html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initail-scale=1.0">
+  <title>Physics</title>
+  <script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link  rel="stylesheet" type="text/css" href="{% static 'mainapp/css/english.css' %}">
+  <link  rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'mainapp/w3.css' %}">
+
+    <script src="{% static 'mainapp/jquery.js' %}"></script>
+    <script src="{% static 'mainapp/countdown.js' %}"></script>
+  <script language="javascript" type="text/javascript" src="{% static 'mainapp/p5/p5.js' %}"></script>
+  <script language="javascript" src="{% static 'mainapp/p5/p5.dom.js' %}"></script>
+  <script language="javascript" src="{% static 'mainapp/p5/p5.sound.js' %}"></script>
+    <script type = "text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+    </script>
+</head>
+<body>
+  <!--header-->
+  <div class="container-fluid topbar" >
+    <div class="container">
+      <div class="row" >
+        <div class="col-sm-6" >
+          <a href='https://www.facebook.com' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Facebook"class="social" ><i class="fa fa-facebook" style="font-size:17px; color:white;"> </i></a>
+          <a href='https://twitter.com/login' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Twitter" class="social"><i class="fa fa-twitter" style="font-size:17px; color:white;"> </i></a>
+          <a href='https://plus.google.com/' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Google plus"class="social"><i class="fa fa-google-plus" style="font-size:17px; color:white;"> </i></a>
+        </div>
+        <div class="col-sm-6 contact text-right">
+          <span class="glyphicon glyphicon-envelope" ></span> examplify@gmail.com
+          <span class="glyphicon glyphicon-earphone"></span> +977-9800000000
+            <a href="{% url 'logout' %}" style="text-decoration:none; margin-left:3px;"> Logout</a>
+        </div>
+      </div>
+    </div>
+  </div><!-- end of header-->
+
+<!-------------------this is the timerwala    ------------------------>
+
+
+
+<div class="timerwala">
+<div class="row">
+    <div class="col-md-4 col-sm-4"> <img class="logoko" src="{% static 'mainapp/images/examplifylogo.jpg' %}" width="200px">   </div>
+
+    <div class=" cancelko col-md-4 col-sm-4"></div>
+    <div id="timer" class="timerko col-md-4 col-sm-4"></div>
+                                                     </div>
+
+    </div>
+
+
+
+
+<!-------------------this is the timerwala    ------------------------>
+
+
+<!--------------------    main queston ko tab------------------------->
+
+
+<div class=" questionko container-fluid" style="margin-top:100px;">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+            <div class="panel-body">
+<form action="{%url 'result' %}" method="post">
+{% csrf_token %}
+    {% for questions in object_list %}
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+Q.{{ questions.question }}<br>
+            </div>
+            </div>
+    </div>
+<div class="radiobtn">
+    <input type="radio" name="{{questions.id}}" value="option1" id="option1">{{ questions.option1 }}<br>
+    <input type="radio" name="{{questions.id}}" value="option2" id="option2">{{ questions.option2}}<br>
+    <input type="radio" name="{{questions.id}}" value="option3" id="option3">{{ questions.option3 }}<br>
+    <input type="radio" name="{{questions.id}}" value="option4"  id="option4">{{ questions.option4 }}<br>
+</div>
+
+{% endfor %}
+    <div class="col-md-2 col-md-offset-4">
+<input  class="btn btn-success"type="submit" value="Submit" />
+        </div>
+</form>
+                </div>
+                </div>
+        </div>
+
+    </div>
+
+    </div>
+
+</div>
+
+
+    <!-------------    main queston ko tab--------------------->
+
+
+    <!--footer-->
+<div class=" container-fluid footer">
+  <div class="container">
+    <div class="col-sm-4">
+      <img src="{% static 'mainapp/images/examplifylogo.jpg' %}" alt="" class="img-responsive" width="100px" height="50px" style="border-radius:6px;text-align: justify;
+      text-justify: inter-word;"/>
+      <p>Join Online</p>
+        <p>Online Entrance Examination</p>
+    </div>
+    <div class="col-sm-4">
+    <p>Quick links</p>
+    <ul>
+      <li><a href="#">&raquo;Home</a></li>
+      <li><a href="#">&raquo;My result</a></li>
+      <li><a href="#">&raquo;Forum</a></li>
+    </ul>
+  </div>
+    <div class="col-sm-4"></div>
+    <p>Contact Us</p>
+    <p><strong> Address</strong>: Western Regional Campus</p>
+    <p><strong> Email</strong>: examplify@gmail.com</p>
+    <p><strong> Phone</strong>: +977-98000000</p>
+  </div>
+</div>
+</body>
+</html>
+
+

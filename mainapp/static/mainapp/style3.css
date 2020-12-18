@@ -1,0 +1,59 @@
+.topbar{
+  background: #F26522;
+  padding: 5px 0;
+}
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.social{
+  margin-right: 8px;
+}
+.contact{
+  color:white;
+}
+.my_menu{
+  margin-top: 27px;
+}
+.my_menu .navbar-default{
+  background: none;
+  border: none;
+}
+.my_menu .navbar-nav .active a,.my_menu .navbar-nav .active a:hover{
+  background:#F26522;
+  color: white;
+}
+.my_menu .navbar-nav li a:hover{
+  background:#F26522;
+  color: white;
+}
+@media screen and (max-width: 1200px) {
+    .my_menu .pull-right{ float:none !important;}
+}
+.mySlides {display:none;}
+.myslides img:hover{
+  border:2px solid black;
+}
+.footer{
+  background: #333333;
+  padding: 20px 0;
+  color:white;
+}
+.footer p{
+  color:white;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+.footer ul{
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+.footer ul li a{
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+.footer ul li a:hover{
+  background: grey;
+}
