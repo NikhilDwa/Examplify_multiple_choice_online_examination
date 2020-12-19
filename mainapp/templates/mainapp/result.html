@@ -1,164 +1,117 @@
 <!doctype html>
 <html>
-{% load staticfiles %}
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initail-scale=1.0">
-  <title>result</title>
-  <link href="{% static 'mainapp/bootstrap/css/bootsrap.min.css' %}" rel="stylesheet">
+    {% load staticfiles %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initail-scale=1.0">
+        <title>result</title>
+        <link href="{% static 'mainapp/bootstrap/css/bootsrap.min.css' %}" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'mainapp/bootstrap/js/bootsrap.min.js' %}"></script>
+        <link href="{% static 'mainapp/style3.css' %}" rel="stylesheet">
+        <link  rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'mainapp/bootstrap/css/w4.css' %}">
+        <link href="{% static 'mainapp/ress.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'mainapp/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'mainapp/animate.css' %}">
+    </head>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-  <script src="{% static 'mainapp/bootstrap/js/bootsrap.min.js' %}"></script>
-  <link href="{% static 'mainapp/style3.css' %}" rel="stylesheet">
-  <link  rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{% static 'mainapp/bootstrap/css/w4.css' %}">
-    <link href="{% static 'mainapp/ress.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'mainapp/animate.min.css' %}">
-    <link rel="stylesheet" href="{% static 'mainapp/animate.css' %}">
-</head>
-<body >
-  <!--header-->
-  <div class="container-fluid topbar">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6" >
-          <a href='https://www.facebook.com/esor.subedi' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Facebook"class="social" ><i class="fa fa-facebook" style="font-size:17px; color:white;"> </i></a>
-          <a href='https://twitter.com/login' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Twitter" class="social"><i class="fa fa-twitter" style="font-size:17px; color:white;"> </i></a>
-          <a href='https://plus.google.com/' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Google plus"class="social"><i class="fa fa-google-plus" style="font-size:17px; color:white;"> </i></a>
-        </div>
-        <div class="col-sm-6 contact text-right">
-          <span class="glyphicon glyphicon-envelope" ></span> examplify@gmail.com
-          <span class="glyphicon glyphicon-earphone"></span> +977-9800000000
-            <a href="{% url 'logout' %}" style="text-decoration:none; margin-left:3px;"> Logout</a>
-        </div>
-      </div>
-    </div>
-  </div><!-- end of header-->
-<div class="container">
-  <div class="row">
-    <div class="col-sm-5">
-      <a href='index2.html'><img src="{% static 'mainapp/images/examplifylogo.jpg' %}" width="200" style="margin-top:5px;"></a>
-    </div>
-    <div class="col-sm-7 my_menu">
-      <nav class="navbar navbar-default">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-       <div class="collapse navbar-collapse" id="mynavbar">
-      <ul class="nav navbar-nav pull-right">
-
-
-        <li><a href="{% url 'choice' %}"><b>Next Exam</b></a></li>
-        <li><a href="#"><b>Forum</b></a></li>
-        <li><a href="#"><b>Contact Us</b></a></li>
-      </ul>
-    </div>
-    </nav>
-    </div>
-  </div>
-</div>
-
-
-
-<!--    this is the text before -->
-
-
-
-      <div  class="search_l">
-          <div class="container">
-              <div class="row">
-                  <h2> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Your Results !! </h2>
-                  <p >View the total number scored.  </p>
-
-
+    <body >
+        <div class="container-fluid topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6" >
+                        <a href='https://www.facebook.com/esor.subedi' target="_blank" data-toogle="toottip" data-placement=bottom" title="Facebook" class="social" ><i class="fa fa-facebook" style="font-size:17px; color:white;"> </i></a>
+                        <a href='https://twitter.com/login' target="_blank" data-toogle="toottip" data-placement="bottom" title="Twitter" class="social"><i class="fa fa-twitter" style="font-size:17px; color:white;"> </i></a>
+                        <a href='https://plus.google.com/' target="_blank" data-toogle="toottip" data-placement="bottom" title="Google plus" class="social"><i class="fa fa-google-plus" style="font-size:17px; color:white;"> </i></a>
                     </div>
-                  </div>
-
-
+                    <div class="col-sm-6 contact text-right">
+                        <span class="glyphicon glyphicon-envelope" ></span> examplify@gmail.com
+                        <span class="glyphicon glyphicon-earphone"></span> +977-9800000000
+                        <a href="{% url 'logout' %}" style="text-decoration:none; margin-left:3px;"> Logout</a>
                     </div>
-
-    <hr></hr>
-<!--    this is the text before -->
-
-<!-------------    marks ko design------------->
-
-   <div class="number_tab">
-          <div class="container">
-              <div class="row">
-
-                  <div class="suru col-lg-4 col-md-4" ></div>
-                  <div class="bich col-lg-4 col-md-4 " >
-
-                  <h3 class="wow fadeInUp img-responsive" data-wow-delay="0.4s">{{ score }}</h3>
-
-                  </div>
-                  <div class="last col-lg-4 col-md-4" ></div>
-
                 </div>
+            </div>
+        </div>
 
-    </div>
-   </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <a href='index2.html'><img src="{% static 'mainapp/images/examplifylogo.jpg' %}" width="200" style="margin-top:5px;"></a>
+                </div>
+                <div class="col-sm-7 my_menu">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="mynavbar">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a href="{% url 'choice' %}"><b>Next Exam</b></a></li>
+                                <li><a href="#"><b>Forum</b></a></li>
+                                <li><a href="#"><b>Contact Us</b></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
 
+        <div  class="search_l">
+            <div class="container">
+                <div class="row">
+                    <h2> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Your Results !! </h2>
+                    <p >View the total number scored.  </p>
+                </div>
+            </div>
+        </div>
 
+        <hr>
+        <div class="number_tab">
+            <div class="container">
+                <div class="row">
+                    <div class="suru col-lg-4 col-md-4" ></div>
+                    <div class="bich col-lg-4 col-md-4 " >
+                        <h3 class="wow fadeInUp img-responsive" data-wow-delay="0.4s">{{ score }}</h3>
+                    </div>
+                    <div class="last col-lg-4 col-md-4" ></div>
+                </div>
+            </div>
+        </div>
 
-<!--    <!-------------    marks ko design------------->
+        <div class=" container-fluid footer">
+            <div class="container">
+                <div class="col-sm-4">
+                    <img src="{% static 'mainapp/images/examplifylogo.jpg' %}" alt="" class="img-responsive" width="100px" height="50px" style="border-radius:6px;text-align: justify;
+          text-justify: inter-word;"/>
+                    <p>Join Online</p>
+                    <p>Online Entrance Examination</p>
+                </div>
+                <div class="col-sm-4">
+                    <p>Quick links</p>
+                    <ul>
+                        <li><a href="#">&raquo;Home</a></li>
+                        <li><a href="#">&raquo;My result</a></li>
+                        <li><a href="#">&raquo;Forum</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4"></div>
+                <p>Contact Us</p>
+                <p><strong> Address</strong>: Western Regional Campus</p>
+                <p><strong> Email</strong>: examplify@gmail.com</p>
+                <p><strong> Phone</strong>: +977-98000000</p>
+            </div>
+        </div>
 
-
-
-
-
-
-
-<!--    this is the footer-->
-    <!--footer-->
-<div class=" container-fluid footer">
-  <div class="container">
-    <div class="col-sm-4">
-      <img src="{% static 'mainapp/images/examplifylogo.jpg' %}" alt="" class="img-responsive" width="100px" height="50px" style="border-radius:6px;text-align: justify;
-      text-justify: inter-word;"/>
-      <p>Join Online</p>
-        <p>Online Entrance Examination</p>
-    </div>
-    <div class="col-sm-4">
-    <p>Quick links</p>
-    <ul>
-      <li><a href="#">&raquo;Home</a></li>
-      <li><a href="#">&raquo;My result</a></li>
-      <li><a href="#">&raquo;Forum</a></li>
-    </ul>
-  </div>
-    <div class="col-sm-4"></div>
-    <p>Contact Us</p>
-    <p><strong> Address</strong>: Western Regional Campus</p>
-    <p><strong> Email</strong>: examplify@gmail.com</p>
-    <p><strong> Phone</strong>: +977-98000000</p>
-  </div>
-
-
-</div>
-
-
-
-       <!-- -------------     this is for the animation-->
-      <script src="{% static 'mainapp/js/wowo.min.js' %}"></script>
-    <script>
-        new WOW().init();
-        window.location.replace ();
-    </script>
-<!-------------ed animation------------------->
+        <script src="{% static 'mainapp/js/wowo.min.js' %}"></script>
+        <script>
+            new WOW().init();
+            window.location.replace ();
+        </script>
         <script src="{% static 'mainapp/js/bootsrap.min.js' %}"></script>
-</body>
+    </body>
 </html>
-
-
-
-
-
-
-<!--    this is the footer-->

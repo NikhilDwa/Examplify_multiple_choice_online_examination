@@ -1,7 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
 class Exam(models.Model):
     name = models.CharField(max_length=100, default="")
 
@@ -20,7 +19,7 @@ class Questions(models.Model):
     option4 = models.CharField(max_length=50, default="")
     mark = (('option1', 'option1'), ('option2', 'option2'), ('option3', 'option3'), ('option4', 'option4'))
     answer = models.CharField(max_length=10, choices=mark, default="")
-    exam = models.ForeignKey(Exam)
+    exam = models.ForeignKey(Exam, on_delete=True)
 
     def __unicode__(self):
         return self.question
