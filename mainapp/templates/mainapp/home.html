@@ -1,9 +1,8 @@
-{% load staticfiles %}
 <html>
-<head>
-  {% load staticfiles %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initail-scale=1.0">
+    {% load staticfiles %}
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initail-scale=1.0">
   <title>Welcome to Examplify</title>
   <script
   src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -115,12 +114,11 @@ function carousel() {
     x[myIndex-1].style.display = "block";
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
-</script>
-<script>
-  #(document).ready(function(){
-    #('[data-toogle="tooltip"]').tooltip();
-  });
-</script>
-
-</body>
+      </script>
+      <script>
+      #(document).ready(function(){
+        #('[data-toogle="tooltip"]').tooltip();
+      });
+      </script>
+    </body>
 </html>

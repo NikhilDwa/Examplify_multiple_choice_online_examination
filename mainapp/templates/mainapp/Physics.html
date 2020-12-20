@@ -34,9 +34,9 @@
             <div class="container">
                 <div class="row" >
                     <div class="col-sm-6" >
-                        <a href='https://www.facebook.com' target="_blank" data-toogle="toottip" data-placement="bottom" title="Facebook"class="social" ><i class="fa fa-facebook" style="font-size:17px; color:white;"> </i></a>
+                        <a href='https://www.facebook.com' target="_blank" data-toogle="toottip" data-placement="bottom" title="Facebook" class="social" ><i class="fa fa-facebook" style="font-size:17px; color:white;"> </i></a>
                         <a href='https://twitter.com/login' target="_blank" data-toogle="toottip" data-placement="bottom" title="Twitter" class="social"><i class="fa fa-twitter" style="font-size:17px; color:white;"> </i></a>
-                        <a href='https://plus.google.com/' target="_blank" data-toogle="toottip" data-placement="bottom" title="Google plus"class="social"><i class="fa fa-google-plus" style="font-size:17px; color:white;"> </i></a>
+                        <a href='https://plus.google.com/' target="_blank" data-toogle="toottip" data-placement="bottom" title="Google plus" class="social"><i class="fa fa-google-plus" style="font-size:17px; color:white;"> </i></a>
                     </div>
                     <div class="col-sm-6 contact text-right">
                         <span class="glyphicon glyphicon-envelope" ></span> examplify@gmail.com
@@ -56,72 +56,60 @@
             </div>
         </div>
 
-<div class=" questionko container-fluid" style="margin-top:100px;">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-            <div class="panel-body">
-<form action="{%url 'result' %}" method="post">
-{% csrf_token %}
-    {% for questions in object_list %}
-    <div class="col-md-12">
-        <div class="panel panel-default">
-            <div class="panel-body">
-Q.{{ questions.question }}<br>
-            </div>
-            </div>
-    </div>
-<div class="radiobtn">
-    <input type="radio" name="{{questions.id}}" value="option1" id="option1">{{ questions.option1 }}<br>
-    <input type="radio" name="{{questions.id}}" value="option2" id="option2">{{ questions.option2}}<br>
-    <input type="radio" name="{{questions.id}}" value="option3" id="option3">{{ questions.option3 }}<br>
-    <input type="radio" name="{{questions.id}}" value="option4"  id="option4">{{ questions.option4 }}<br>
-</div>
-
-{% endfor %}
-    <div class="col-md-2 col-md-offset-4">
-<input  class="btn btn-success"type="submit" value="Submit" />
-        </div>
-</form>
+        <div class=" questionko container-fluid" style="margin-top:100px;">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form action="{%url 'result' %}" method="post">
+                            {% csrf_token %}
+                            {% for questions in object_list %}
+                                <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            Q.{{ questions.question }}<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radiobtn">
+                                    <input type="radio" name="{{questions.id}}" value="option1" id="option1">{{ questions.option1 }}<br>
+                                    <input type="radio" name="{{questions.id}}" value="option2" id="option2">{{ questions.option2}}<br>
+                                    <input type="radio" name="{{questions.id}}" value="option3" id="option3">{{ questions.option3 }}<br>
+                                    <input type="radio" name="{{questions.id}}" value="option4"  id="option4">{{ questions.option4 }}<br>
+                                </div>
+                            {% endfor %}
+                                <div class="col-md-2 col-md-offset-4">
+                                    <input  class="btn btn-success" type="submit" value="Submit" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                </div>
+            </div>
         </div>
 
-    </div>
-
-    </div>
-
-</div>
-
-
-    <!-------------    main queston ko tab--------------------->
-
-
-    <!--footer-->
-<div class=" container-fluid footer">
-  <div class="container">
-    <div class="col-sm-4">
-      <img src="{% static 'mainapp/images/examplifylogo.jpg' %}" alt="" class="img-responsive" width="100px" height="50px" style="border-radius:6px;text-align: justify;
+        <div class=" container-fluid footer">
+            <div class="container">
+                <div class="col-sm-4">
+                    <img src="{% static 'mainapp/images/examplifylogo.jpg' %}" alt="" class="img-responsive" width="100px" height="50px" style="border-radius:6px;text-align: justify;
       text-justify: inter-word;"/>
-      <p>Join Online</p>
-        <p>Online Entrance Examination</p>
-    </div>
-    <div class="col-sm-4">
-    <p>Quick links</p>
-    <ul>
-      <li><a href="#">&raquo;Home</a></li>
-      <li><a href="#">&raquo;My result</a></li>
-      <li><a href="#">&raquo;Forum</a></li>
-    </ul>
-  </div>
-    <div class="col-sm-4"></div>
-    <p>Contact Us</p>
-    <p><strong> Address</strong>: Western Regional Campus</p>
-    <p><strong> Email</strong>: examplify@gmail.com</p>
-    <p><strong> Phone</strong>: +977-98000000</p>
-  </div>
-</div>
-</body>
+                    <p>Join Online</p>
+                    <p>Online Entrance Examination</p>
+                </div>
+                <div class="col-sm-4">
+                    <p>Quick links</p>
+                    <ul>
+                        <li><a href="#">&raquo;Home</a></li>
+                        <li><a href="#">&raquo;My result</a></li>
+                        <li><a href="#">&raquo;Forum</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4"></div>
+                    <p>Contact Us</p>
+                    <p><strong> Address</strong>: Western Regional Campus</p>
+                    <p><strong> Email</strong>: examplify@gmail.com</p>
+                    <p><strong> Phone</strong>: +977-98000000</p>
+                </div>
+            </div>
+        </body>
 </html>
-
-
