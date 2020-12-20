@@ -1,154 +1,139 @@
 <html>
-<head>
-  {% load staticfiles %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initail-scale=1.0">
-  <title>Welcome to Examplify</title>
-  <script
-  src="http://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+    {% load staticfiles %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initail-scale=1.0">
+        <title>Welcome to Examplify</title>
+        <script
+            src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+            integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'mainapp/style2.css' %}">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'mainapp/w3.css' %}">
+        <script src="{% static 'mainapp/jquery.js' %}"></script>
+    </head>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link  rel="stylesheet" type="text/css" href="{% static 'mainapp/style2.css' %}">
-  <link  rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="{% static 'mainapp/w3.css' %}">
-
-    <script src="{% static 'mainapp/jquery.js' %}"></script>
-</head>
-
-<body>
-  <!--header-->
-  <div class="container-fluid topbar">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6" >
-          <a href='https://www.facebook.com/esor.subedi' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Facebook"class="social" ><i class="fa fa-facebook" style="font-size:17px; color:white;"> </i></a>
-          <a href='https://twitter.com/login' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Twitter" class="social"><i class="fa fa-twitter" style="font-size:17px; color:white;"> </i></a>
-          <a href='https://plus.google.com/' target="_blank" data-toogle="toottip" data-placement:"bottom" title="Google plus"class="social"><i class="fa fa-google-plus" style="font-size:17px; color:white;"> </i></a>
+    <body>
+        <div class="container-fluid topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6" >
+                        <a href='https://www.facebook.com/esor.subedi' target="_blank" data-toogle="toottip" data-placement="bottom" title="Facebook" class="social" ><i class="fa fa-facebook" style="font-size:17px; color:white;"> </i></a>
+                        <a href='https://twitter.com/login' target="_blank" data-toogle="toottip" data-placement="bottom" title="Twitter" class="social"><i class="fa fa-twitter" style="font-size:17px; color:white;"> </i></a>
+                        <a href='https://plus.google.com/' target="_blank" data-toogle="toottip" data-placement="bottom" title="Google plus" class="social"><i class="fa fa-google-plus" style="font-size:17px; color:white;"> </i></a>
+                    </div>
+                    <div class="col-sm-6 contact text-right">
+                        <span class="glyphicon glyphicon-envelope" ></span>examplify@gmail.com
+                        <span class="glyphicon glyphicon-earphone"></span>+977-9800000000
+                        <a href="{% url 'login' %}" style="text-decoration:none; margin-left:3px;"> Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6 contact text-right">
-          <span class="glyphicon glyphicon-envelope" ></span>examplify@gmail.com
-          <span class="glyphicon glyphicon-earphone"></span>+977-9800000000
-            <a href="{% url 'login' %}" style="text-decoration:none; margin-left:3px;"> Logout</a>
-        </div>
-      </div>
-    </div>
-  </div><!-- end of header-->
-<div class="container">
-  <div class="row">
-    <div class="col-sm-5">
-      <a href='index2.html'><img src="{% static 'mainapp/images/examplifylogo.jpg' %}" width="200" style="margin-top:5px;"/></a>
-    </div>
-    <div class="col-sm-7 my_menu">
-      <nav class="navbar navbar-default">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-       <div class="collapse navbar-collapse" id="mynavbar">
-      <ul class="nav navbar-nav pull-right">
-        <li class="active"><a href="index2.html"><b>Home</b></a></li>
-        <li><a href="javascript:void(0)" class="dropdown-toggle "  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Take Test</b> <span class="caret"></span></a>
-        <ul class="dropdown-menu ">
-          <li><a href="#" >Physics</a></li>
-          <li><a href="#" >Chemistry</a></li>
-          <li><a href="#" >Maths</a></li>
-          <li><a href="#" >English</a></li>
 
-        </ul>
-      </li>
-        <li><a href="#"><b>My Result</b></a></li>
-        <li><a href="forum.html"><b>Forum</b></a></li>
-        <li><a href="#"><b>Contact Us</b></a></li>
-      </ul>
-    </div>
-    </nav>
-    </div>
-  </div>
-</div>
-<!-- automatic slide shows-->
-<div class="w3-content w3-section" style="max-width:1200px" >
-  <a href='http://www.keckist.edu.np/keckist/' target="_blank" ><img class="mySlides img-responsive" src="{% static 'mainapp/images/kathmandu.jpg' %}" style="width:1200px; height:400px;border:3px solid #babec4; border-radius:5px;"></a>
-  <a href='https://kec.edu.np/' target="_blank" ><img class="mySlides img-responsive" src="{% static 'mainapp/images/kat.jpg' %}" style="width:1200px; height:400px;border:3px solid #babec4;border-radius:5px;"></a>
-  <a href='http://kathford.edu.np/' target="_blank" ><img class="mySlides img-responsive" src="{% static 'mainapp/images/kantipur.jpg' %}" style="width:1200px;height:400px;border:3px solid #babec4;border-radius:5px;"></a>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8" style="text-align: justify;
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <a href='index2.html'><img src="{% static 'mainapp/images/examplifylogo.jpg' %}" width="200" style="margin-top:5px;"/></a>
+                </div>
+                <div class="col-sm-7 my_menu">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="mynavbar">
+                            <ul class="nav navbar-nav pull-right">
+                                <li class="active"><a href="index2.html"><b>Home</b></a></li>
+                                <li><a href="javascript:void(0)" class="dropdown-toggle "  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Take Test</b> <span class="caret"></span></a>
+                                    <ul class="dropdown-menu ">
+                                        <li><a href="#" >Physics</a></li>
+                                        <li><a href="#" >Chemistry</a></li>
+                                        <li><a href="#" >Maths</a></li>
+                                        <li><a href="#" >English</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><b>My Result</b></a></li>
+                                <li><a href="forum.html"><b>Forum</b></a></li>
+                                <li><a href="#"><b>Contact Us</b></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-content w3-section" style="max-width:1200px" >
+            <a href='http://www.keckist.edu.np/keckist/' target="_blank" ><img class="mySlides img-responsive" src="{% static 'mainapp/images/kathmandu.jpg' %}" style="width:1200px; height:400px;border:3px solid #babec4; border-radius:5px;"></a>
+            <a href='https://kec.edu.np/' target="_blank" ><img class="mySlides img-responsive" src="{% static 'mainapp/images/kat.jpg' %}" style="width:1200px; height:400px;border:3px solid #babec4;border-radius:5px;"></a>
+            <a href='http://kathford.edu.np/' target="_blank" ><img class="mySlides img-responsive" src="{% static 'mainapp/images/kantipur.jpg' %}" style="width:1200px;height:400px;border:3px solid #babec4;border-radius:5px;"></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8" style="text-align: justify;
     text-justify: inter-word;">
-      <h1>Welcome To Examplify</h1>
-      <p>In the 1860s, the English physician Thomas Laycock described euphoria as the feeling of bodily well-being and hopefulness; he noted its misplaced presentation in the final stage of some terminal illnesses and attributed such euphoria to neurological dysfunction.[14] Sigmund Freud's 1884 monograph Über Coca described (his own) consumption of cocaine producing "the normal euphoria of a healthy person",[15] while about 1890 the German neuropsychiatrist Carl Wernicke lectured about the "abnormal euphoria" in patients with mania.</p>
-<p>A 1903 article in The Boston Daily Globe refers to euphoria as "pleasant excitement" and "the sense of ease and well-being".[17] In 1920 Popular Science magazine described euphoria as "a high sounding name" meaning "feeling fit": normally making life worth living, motivating drug use, and ill formed in certain mental illnesses.[18] Robert S. Woodworth's 1921 textbook Psychology: A study of mental life, describes euphoria as an organic state which is the opposite of fatigue and "means about the same as feeling good."</p>
+                    <h1>Welcome To Examplify</h1>
+                    <p>In the 1860s, the English physician Thomas Laycock described euphoria as the feeling of bodily well-being and hopefulness; he noted its misplaced presentation in the final stage of some terminal illnesses and attributed such euphoria to neurological dysfunction.[14] Sigmund Freud's 1884 monograph Über Coca described (his own) consumption of cocaine producing "the normal euphoria of a healthy person",[15] while about 1890 the German neuropsychiatrist Carl Wernicke lectured about the "abnormal euphoria" in patients with mania.</p>
+                    <p>A 1903 article in The Boston Daily Globe refers to euphoria as "pleasant excitement" and "the sense of ease and well-being".[17] In 1920 Popular Science magazine described euphoria as "a high sounding name" meaning "feeling fit": normally making life worth living, motivating drug use, and ill formed in certain mental illnesses.[18] Robert S. Woodworth's 1921 textbook Psychology: A study of mental life, describes euphoria as an organic state which is the opposite of fatigue and "means about the same as feeling good."</p>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+        </div>
 
-    </div>
-    <div class="col-sm-4">
-    </div>
-
-  </div>
-</div>
-<!--footer-->
-<div class=" container-fluid footer">
-  <div class="container">
-    <div class="col-sm-4">
-      <img src="{% static 'mainapp/images/examplifylogo.jpg' %}" alt="" class="img-responsive" width="100px" height="50px" style="border-radius:6px;text-align: justify;
+        <div class=" container-fluid footer">
+            <div class="container">
+                <div class="col-sm-4">
+                    <img src="{% static 'mainapp/images/examplifylogo.jpg' %}" alt="" class="img-responsive" width="100px" height="50px" style="border-radius:6px;text-align: justify;
       text-justify: inter-word;"/>
-      <p>conduct and join online</p>
-        <p>entrance examination</p>
-    </div>
-    <div class="col-sm-4">
-    <p>Quick links</p>
-    <ul>
-      <li><a href="index2.html">&raquo; Home</a></li>
-      <li><a href="result.html">&raquo;My result</a></li>
-      <li><a href="forum.html">&raquo;Forum</a></li>
-    </ul>
-  </div>
-    <div class="col-sm-4"></div>
-    <p>Contact Us</p>
-    <p><strong> Address</strong>: WRC</p>
-    <p><strong> Email</strong>: examplify@gmail.com</p>
-    <p><strong> Phone</strong>:97798000000</p>
-  </div>
-
-
-</div>
-
-
-
-
-
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
-<script>
-  #(document).ready(function(){
-    #('[data-toogle="tooltip"]').tooltip();
-  });
-</script>
-
-</body>
+                    <p>conduct and join online</p>
+                    <p>entrance examination</p>
+                </div>
+                <div class="col-sm-4">
+                    <p>Quick links</p>
+                    <ul>
+                        <li><a href="index2.html">&raquo; Home</a></li>
+                        <li><a href="result.html">&raquo;My result</a></li>
+                        <li><a href="forum.html">&raquo;Forum</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4"></div>
+                <p>Contact Us</p>
+                <p><strong> Address</strong>: WRC</p>
+                <p><strong> Email</strong>: examplify@gmail.com</p>
+                <p><strong> Phone</strong>:97798000000</p>
+            </div>
+        </div>
+        <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+        <script>
+            #(document).ready(function(){
+           #('[data-toogle="tooltip"]').tooltip();
+           });
+        </script>
+    </body>
 </html>

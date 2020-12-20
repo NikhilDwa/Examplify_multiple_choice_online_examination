@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0c8f011d-6afb-45bc-9970-646a63dd6307" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/Chemistry.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/Chemistry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/English.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/English.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/Mathematics.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/Mathematics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/Physics.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/Physics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/choice.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/choice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/form-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/form-template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/homehome.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/homehome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
